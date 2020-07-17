@@ -1,4 +1,4 @@
-import { CMS_NAME } from '../lib/constants'
+import {GIST_HOME} from '../lib/constants'
 
 const Intro = () => {
   return (
@@ -7,14 +7,22 @@ const Intro = () => {
         Blog.
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{' '}
+        A statically generated blog using{' '}
         <a
-          href="https://nextjs.org/"
+            href={`${GIST_HOME}`}
           className="underline hover:text-success duration-200 transition-colors"
         >
-          Next.js
+          Code
         </a>{' '}
-        and {CMS_NAME}.
+
+        and
+
+        {' '}<a
+              href={`${GIST_HOME}`}
+              className="underline hover:text-success duration-200 transition-colors"
+          >
+              Experience.
+          </a>{' '}
       </h4>
     </section>
   )
